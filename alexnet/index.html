@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>AlexNet - ImageNet Models (Keras)</title>
+      
+      
+      
+      
+        <meta name="author" content="Dan Dixey">
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="ImageNet Models (Keras)">
+    <meta property="og:image" content="None/../">
+    <meta name="apple-mobile-web-app-title" content="ImageNet Models (Keras)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../None">
+    <link rel="icon" type="image/x-icon" href="../None">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../assets/fonts/icon.eot?52m981');
+      	src: url('../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../assets/stylesheets/application-54f87043f3.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono">
+      <style>
+        body, input {
+          font-family: 'Roboto', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Roboto Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-indigo palette-accent-light-blue">
+    
+      
+      
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                Models <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        AlexNet
+      </div>
+    </div>
+    
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="https://github.com/dandxy89/#" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          ImageNet Models (Keras)
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+          <br>
+          dandxy89/#
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            
+            <a href="https://github.com/dandxy89/#/archive/master.zip" target="_blank" title="Download" data-action="download">
+              <i class="icon icon-download"></i> Download
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/dandxy89/#/stargazers" target="_blank" title="Stargazers" data-action="star">
+              <i class="icon icon-star"></i> Stars
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Overview" href="..">
+      Overview
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Models</span>
+    <ul>
+      
+        
+  <li>
+    <a class="current" title="AlexNet" href="./">
+      AlexNet
+    </a>
+    
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Info" href="#info">
+                Info
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Keras Model Visulisation" href="#keras-model-visulisation">
+                Keras Model Visulisation
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Keras Model Builds" href="#keras-model-builds">
+                Keras Model Builds
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="CaffeNet" href="../caffenet/">
+      CaffeNet
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="GoogLeNet" href="../googlenet/">
+      GoogLeNet
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="VGG-19" href="../vgg19/">
+      VGG-19
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Demos" href="../demos/">
+      Demos
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Acknowledgements" href="../license/">
+      Acknowledgements
+    </a>
+    
+  </li>
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+            <h1>AlexNet</h1>
+          
+          <h3 id="info">Info<a class="headerlink" href="#info" title="Permanent link">#</a></h3>
+<p>Two version of the AlexNet model have been created:</p>
+<ol>
+<li>Caffe Pre-trained version</li>
+<li>the version displayed in the diagram from the AlexNet paper</li>
+</ol>
+<pre><code>@article{ding2014theano,
+  title={Theano-based Large-Scale Visual Recognition with Multiple GPUs},
+  author={Ding, Weiguang and Wang, Ruoyan and Mao, Fei and Taylor, Graham},
+  journal={arXiv preprint arXiv:1412.2302},
+  year={2014}
+}
+</code></pre>
+
+<h3 id="keras-model-visulisation">Keras Model Visulisation<a class="headerlink" href="#keras-model-visulisation" title="Permanent link">#</a></h3>
+<p><strong>AlexNet (CaffeNet version )</strong></p>
+<p><img alt="AlexNet (CaffeNet version)" src="../Images/AlexNet.png" /></p>
+<p><strong>AlexNet (Original)</strong></p>
+<p><img alt="AlexNet (Original )" src="../Images/AlexNet_Original.png" /></p>
+<h3 id="keras-model-builds">Keras Model Builds<a class="headerlink" href="#keras-model-builds" title="Permanent link">#</a></h3>
+<p><strong>AlexNet (CaffeNet version )</strong></p>
+<pre><code># Channel 1 - Convolution Net Layer 1
+x = conv2D_lrn2d(
+    img_input, 3, 11, 11, subsample=(
+        1, 1), border_mode='same')
+x = MaxPooling2D(
+    strides=(
+        4, 4), pool_size=(
+            4, 4), dim_ordering=DIM_ORDERING)(x)
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x)
+
+# Channel 1 - Convolution Net Layer 2
+x = conv2D_lrn2d(x, 48, 55, 55, subsample=(1, 1), border_mode='same')
+x = MaxPooling2D(
+    strides=(
+        2, 2), pool_size=(
+            2, 2), dim_ordering=DIM_ORDERING)(x)
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x)
+
+# Channel 1 - Convolution Net Layer 3
+x = conv2D_lrn2d(x, 128, 27, 27, subsample=(1, 1), border_mode='same')
+x = MaxPooling2D(
+    strides=(
+        2, 2), pool_size=(
+            2, 2), dim_ordering=DIM_ORDERING)(x)
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x)
+
+# Channel 1 - Convolution Net Layer 4
+x = conv2D_lrn2d(x, 192, 13, 13, subsample=(1, 1), border_mode='same')
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x)
+
+# Channel 1 - Convolution Net Layer 5
+x = conv2D_lrn2d(x, 192, 13, 13, subsample=(1, 1), border_mode='same')
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x)
+
+# Channel 1 - Cov Net Layer 6
+x = conv2D_lrn2d(x, 128, 27, 27, subsample=(1, 1), border_mode='same')
+x = MaxPooling2D(
+    strides=(
+        2, 2), pool_size=(
+            2, 2), dim_ordering=DIM_ORDERING)(x)
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x)
+
+# Channel 1 - Cov Net Layer 7
+x = Flatten()(x)
+x = Dense(2048, activation='relu')(x)
+x = Dropout(DROPOUT)(x)
+
+# Channel 1 - Cov Net Layer 8
+x = Dense(2048, activation='relu')(x)
+x = Dropout(DROPOUT)(x)
+
+# Final Channel - Cov Net 9
+x = Dense(output_dim=NB_CLASS,
+          activation='softmax')(x)
+</code></pre>
+<p><strong>AlexNet (Original)</strong></p>
+<pre><code># Channel 1 - Conv Net Layer 1
+x = conv2D_bn(img_input, 3, 11, 11, subsample=(1, 1), border_mode='same')
+x = MaxPooling2D(
+    strides=(
+        4, 4), pool_size=(
+            4, 4), dim_ordering=DIM_ORDERING)(x)
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x)
+
+# Channel 2 - Conv Net Layer 1
+y = conv2D_bn(img_input, 3, 11, 11, subsample=(1, 1), border_mode='same')
+y = MaxPooling2D(
+    strides=(
+        4, 4), pool_size=(
+            4, 4), dim_ordering=DIM_ORDERING)(y)
+y = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(y)
+
+# Channel 1 - Conv Net Layer 2
+x = conv2D_bn(x, 48, 55, 55, subsample=(1, 1), border_mode='same')
+x = MaxPooling2D(
+    strides=(
+        2, 2), pool_size=(
+            2, 2), dim_ordering=DIM_ORDERING)(x)
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x)
+
+# Channel 2 - Conv Net Layer 2
+y = conv2D_bn(y, 48, 55, 55, subsample=(1, 1), border_mode='same')
+y = MaxPooling2D(
+    strides=(
+        2, 2), pool_size=(
+            2, 2), dim_ordering=DIM_ORDERING)(y)
+y = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(y)
+
+# Channel 1 - Conv Net Layer 3
+x = conv2D_bn(x, 128, 27, 27, subsample=(1, 1), border_mode='same')
+x = MaxPooling2D(
+    strides=(
+        2, 2), pool_size=(
+            2, 2), dim_ordering=DIM_ORDERING)(x)
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x)
+
+# Channel 2 - Conv Net Layer 3
+y = conv2D_bn(y, 128, 27, 27, subsample=(1, 1), border_mode='same')
+y = MaxPooling2D(
+    strides=(
+        2, 2), pool_size=(
+            2, 2), dim_ordering=DIM_ORDERING)(y)
+y = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(y)
+
+# Channel 1 - Conv Net Layer 4
+x1 = merge([x, y], mode='concat', concat_axis=CONCAT_AXIS)
+x1 = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x1)
+x1 = conv2D_bn(x1, 192, 13, 13, subsample=(1, 1), border_mode='same')
+
+# Channel 2 - Conv Net Layer 4
+y1 = merge([x, y], mode='concat', concat_axis=CONCAT_AXIS)
+y1 = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(y1)
+y1 = conv2D_bn(y1, 192, 13, 13, subsample=(1, 1), border_mode='same')
+
+# Channel 1 - Conv Net Layer 5
+x2 = merge([x1, y1], mode='concat', concat_axis=CONCAT_AXIS)
+x2 = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x2)
+x2 = conv2D_bn(x2, 192, 13, 13, subsample=(1, 1), border_mode='same')
+
+# Channel 2 - Conv Net Layer 5
+y2 = merge([x1, y1], mode='concat', concat_axis=CONCAT_AXIS)
+y2 = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(y2)
+y2 = conv2D_bn(y2, 192, 13, 13, subsample=(1, 1), border_mode='same')
+
+# Channel 1 - Cov Net Layer 6
+x3 = conv2D_bn(x2, 128, 27, 27, subsample=(1, 1), border_mode='same')
+x3 = MaxPooling2D(
+    strides=(
+        2, 2), pool_size=(
+            2, 2), dim_ordering=DIM_ORDERING)(x3)
+x3 = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x3)
+
+# Channel 2 - Cov Net Layer 6
+y3 = conv2D_bn(y2, 128, 27, 27, subsample=(1, 1), border_mode='same')
+y3 = MaxPooling2D(
+    strides=(
+        2, 2), pool_size=(
+            2, 2), dim_ordering=DIM_ORDERING)(y3)
+y3 = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(y3)
+
+# Channel 1 - Cov Net Layer 7
+x4 = merge([x3, y3], mode='mul', concat_axis=CONCAT_AXIS)
+x4 = Flatten()(x4)
+x4 = Dense(2048, activation='relu')(x4)
+x4 = Dropout(DROPOUT)(x4)
+
+# Channel 2 - Cov Net Layer 7
+y4 = merge([x3, y3], mode='mul', concat_axis=CONCAT_AXIS)
+y4 = Flatten()(y4)
+y4 = Dense(2048, activation='relu')(y4)
+y4 = Dropout(DROPOUT)(y4)
+
+# Channel 1 - Cov Net Layer 8
+x5 = merge([x4, y4], mode='mul')
+x5 = Dense(2048, activation='relu')(x5)
+x5 = Dropout(DROPOUT)(x5)
+
+# Channel 2 - Cov Net Layer 8
+y5 = merge([x4, y4], mode='mul')
+y5 = Dense(2048, activation='relu')(y5)
+y5 = Dropout(DROPOUT)(y5)
+
+# Final Channel - Cov Net 9
+xy = merge([x5, y5], mode='mul')
+xy = Dense(output_dim=NB_CLASS,
+           activation='softmax')(xy)
+</code></pre>
+          <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 Dan Dixey &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href=".." title="Overview">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                Overview
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../caffenet/" title="CaffeNet">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                CaffeNet
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '..';
+      var repo_id  = 'dandxy89/#';
+    </script>
+    <script src="../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>
