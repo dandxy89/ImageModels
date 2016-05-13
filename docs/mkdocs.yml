@@ -1,0 +1,37 @@
+site_name: ImageNet Models (Keras)
+site_author: Dan Dixey
+
+theme: 'material'
+
+# Repository
+repo_url: 'https://github.com/dandxy89/#'
+
+# Copyright
+copyright: 'Copyright (c) 2016 Dan Dixey'
+
+site_description: 'Documentation for the development of ImageNet Models'
+
+dev_addr: '0.0.0.0:8189'
+
+pages:
+- Overview: index.md
+- Models:
+  - AlexNet: alexnet.md
+  - CaffeNet: caffenet.md
+  - GoogLeNet: googlenet.md
+  - VGG-19: vgg19.md
+- Demos: demos.md
+- Acknowledgements: license.md
+
+extra:
+  palette:
+    primary: 'indigo'
+    accent: 'light blue'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: '#'
