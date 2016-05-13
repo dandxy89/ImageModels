@@ -14,18 +14,18 @@
     Created 13/5/2016
 """
 import numpy as np
-from AlexNet import create_model as AlexNetModel
-from AlexNet_Original import create_model as AlexNetOrigModel
-from CaffeNet import create_model as CaffeNetModel
-from GoogLeNet import create_model as GoogleNetModel
-from VGG19 import create_model as VGG19Model
-from AlexNet import check_print as AlexNetModelcheck_print
-from AlexNet_Original import check_print as AlexNetOrigModelcheck_print
-from CaffeNet import check_print as CaffeNetModelcheck_print
-from GoogLeNet import check_print as GoogleNetModelcheck_print
-from VGG19 import check_print as VGG19Modelcheck_print
 from keras.models import Model
 
+from AlexNet import check_print as AlexNetModelcheck_print
+from AlexNet import create_model as AlexNetModel
+from AlexNet_Original import check_print as AlexNetOrigModelcheck_print
+from AlexNet_Original import create_model as AlexNetOrigModel
+from CaffeNet import check_print as CaffeNetModelcheck_print
+from CaffeNet import create_model as CaffeNetModel
+from GoogLeNet import check_print as GoogleNetModelcheck_print
+from GoogLeNet import create_model as GoogleNetModel
+from VGG19 import check_print as VGG19Modelcheck_print
+from VGG19 import create_model as VGG19Model
 
 model_choice = dict(AlexNet=AlexNetModel,
                     AlexNetOrig=AlexNetOrigModel,
@@ -37,8 +37,8 @@ model_choice = dict(AlexNet=AlexNetModel,
 model_val = 'AlexNet'
 test_batch = False
 get_graph = False
-show_activation = False
-show_cmd_output = True
+show_activation = True
+show_cmd_output = False
 
 
 if not show_cmd_output:

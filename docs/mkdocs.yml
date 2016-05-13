@@ -9,7 +9,7 @@ repo_url: 'https://github.com/dandxy89/ImageModels'
 # Copyright
 copyright: 'Copyright (c) 2016 Dan Dixey'
 
-site_description: 'Documentation for the development of ImageNet Models'
+site_description: 'Documentation for the development of ImageNet Models (5 Total)'
 
 dev_addr: '0.0.0.0:8189'
 
