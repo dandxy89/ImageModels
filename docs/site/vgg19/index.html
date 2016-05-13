@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>VGG-19 - ImageNet Models (Keras)</title>
+      
+      
+      
+      
+        <meta name="author" content="Dan Dixey">
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="ImageNet Models (Keras)">
+    <meta property="og:image" content="None/../">
+    <meta name="apple-mobile-web-app-title" content="ImageNet Models (Keras)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../None">
+    <link rel="icon" type="image/x-icon" href="../None">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../assets/fonts/icon.eot?52m981');
+      	src: url('../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../assets/stylesheets/application-54f87043f3.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono">
+      <style>
+        body, input {
+          font-family: 'Roboto', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Roboto Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-indigo palette-accent-light-blue">
+    
+      
+      
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                Models <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        VGG-19
+      </div>
+    </div>
+    
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="https://github.com/dandxy89/ImageModels" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          ImageNet Models (Keras)
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+          <br>
+          dandxy89/ImageModels
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            
+            <a href="https://github.com/dandxy89/ImageModels/archive/master.zip" target="_blank" title="Download" data-action="download">
+              <i class="icon icon-download"></i> Download
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/dandxy89/ImageModels/stargazers" target="_blank" title="Stargazers" data-action="star">
+              <i class="icon icon-star"></i> Stars
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Overview" href="..">
+      Overview
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Models</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="AlexNet" href="../alexnet/">
+      AlexNet
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="CaffeNet" href="../caffenet/">
+      CaffeNet
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="GoogLeNet" href="../googlenet/">
+      GoogLeNet
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="VGG-19" href="./">
+      VGG-19
+    </a>
+    
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Info" href="#info">
+                Info
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Keras Model Visulisation" href="#keras-model-visulisation">
+                Keras Model Visulisation
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Keras Model Builds" href="#keras-model-builds">
+                Keras Model Builds
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Demos" href="../demos/">
+      Demos
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Acknowledgements" href="../license/">
+      Acknowledgements
+    </a>
+    
+  </li>
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+            <h1>VGG-19</h1>
+          
+          <h3 id="info">Info<a class="headerlink" href="#info" title="Permanent link">#</a></h3>
+<p>Only one version of VGG-19 has been built</p>
+<pre><code>@article{DBLP:journals/corr/SimonyanZ14a,
+      author    = {Karen Simonyan and
+                   Andrew Zisserman},
+      title     = {Very Deep Convolutional Networks for Large-Scale Image Recognition},
+      journal   = {CoRR},
+      volume    = {abs/1409.1556},
+      year      = {2014},
+      url       = {http://arxiv.org/abs/1409.1556},
+      timestamp = {Wed, 01 Oct 2014 15:00:05 +0200},
+      biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/SimonyanZ14a},
+      bibsource = {dblp computer science bibliography, http://dblp.org}
+    }
+</code></pre>
+
+<h3 id="keras-model-visulisation">Keras Model Visulisation<a class="headerlink" href="#keras-model-visulisation" title="Permanent link">#</a></h3>
+<p><strong>VGG-19</strong></p>
+<p><img alt="VGG-19" src="../Images/VGG19.png" /></p>
+<h3 id="keras-model-builds">Keras Model Builds<a class="headerlink" href="#keras-model-builds" title="Permanent link">#</a></h3>
+<pre><code># Layer Cluster - 1
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(img_input)
+x = Convolution2D(64, 3, 3,
+                  activation='relu',
+                  border_mode='same',
+                  dim_ordering=DIM_ORDERING)(x)
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x)
+x = Convolution2D(64, 3, 3,
+                  activation='relu',
+                  border_mode='same',
+                  dim_ordering=DIM_ORDERING)(x)
+x = MaxPooling2D((2, 2), strides=(2, 2))(x)
+
+# Layer Cluster - 2
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x)
+x = Convolution2D(128, 3, 3,
+                  activation='relu',
+                  border_mode='same',
+                  dim_ordering=DIM_ORDERING)(x)
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x)
+x = Convolution2D(128, 3, 3,
+                  activation='relu',
+                  border_mode='same',
+                  dim_ordering=DIM_ORDERING)(x)
+x = MaxPooling2D((2, 2), strides=(2, 2))(x)
+
+# Layer Cluster - 3
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x)
+x = Convolution2D(256, 3, 3,
+                  activation='relu',
+                  border_mode='same',
+                  dim_ordering=DIM_ORDERING)(x)
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x)
+x = Convolution2D(256, 3, 3,
+                  activation='relu',
+                  border_mode='same',
+                  dim_ordering=DIM_ORDERING)(x)
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x)
+x = Convolution2D(256, 3, 3,
+                  activation='relu',
+                  border_mode='same',
+                  dim_ordering=DIM_ORDERING)(x)
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x)
+x = Convolution2D(256, 3, 3,
+                  activation='relu',
+                  border_mode='same',
+                  dim_ordering=DIM_ORDERING)(x)
+x = MaxPooling2D((2, 2), strides=(2, 2))(x)
+
+# Layer Cluster - 4
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x)
+x = Convolution2D(512, 3, 3,
+                  activation='relu',
+                  border_mode='same',
+                  dim_ordering=DIM_ORDERING)(x)
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x)
+x = Convolution2D(512, 3, 3,
+                  activation='relu',
+                  border_mode='same',
+                  dim_ordering=DIM_ORDERING)(x)
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x)
+x = Convolution2D(512, 3, 3,
+                  activation='relu',
+                  border_mode='same',
+                  dim_ordering=DIM_ORDERING)(x)
+x = ZeroPadding2D(padding=(1, 1), dim_ordering=DIM_ORDERING)(x)
+x = Convolution2D(512, 3, 3,
+                  activation='relu',
+                  border_mode='same',
+                  dim_ordering=DIM_ORDERING)(x)
+x = MaxPooling2D((2, 2), strides=(2, 2))(x)
+
+# Layer Cluster - 5 - Output Layer
+x = Flatten()(x)
+x = Dense(4096, activation='relu')(x)
+x = Dropout(0.5)(x)
+x = Dense(4096, activation='relu')(x)
+x = Dropout(0.5)(x)
+x = Dense(1000, activation='softmax')(x)
+</code></pre>
+          <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 Dan Dixey &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../googlenet/" title="GoogLeNet">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                GoogLeNet
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../demos/" title="Demos">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Demos
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '..';
+      var repo_id  = 'dandxy89/ImageModels';
+    </script>
+    <script src="../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

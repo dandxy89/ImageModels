@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>ImageNet Models (Keras) - Documentation for the development of ImageNet Models</title>
+      
+      
+        <meta name="description" content="Documentation for the development of ImageNet Models">
+      
+      
+      
+        <meta name="author" content="Dan Dixey">
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="ImageNet Models (Keras)">
+    <meta property="og:image" content="None/./">
+    <meta name="apple-mobile-web-app-title" content="ImageNet Models (Keras)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="./None">
+    <link rel="icon" type="image/x-icon" href="./None">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('./assets/fonts/icon.eot?52m981');
+      	src: url('./assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('./assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('./assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('./assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="./assets/stylesheets/application-54f87043f3.css">
+    
+      <link rel="stylesheet" href="./assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono">
+      <style>
+        body, input {
+          font-family: 'Roboto', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Roboto Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="./assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-indigo palette-accent-light-blue">
+    
+      
+      
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+          </span>
+        
+        ImageNet Models (Keras)
+      </div>
+    </div>
+    
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="https://github.com/dandxy89/ImageModels" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          ImageNet Models (Keras)
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+          <br>
+          dandxy89/ImageModels
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            
+            <a href="https://github.com/dandxy89/ImageModels/archive/master.zip" target="_blank" title="Download" data-action="download">
+              <i class="icon icon-download"></i> Download
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/dandxy89/ImageModels/stargazers" target="_blank" title="Stargazers" data-action="star">
+              <i class="icon icon-star"></i> Stars
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="current" title="Overview" href=".">
+      Overview
+    </a>
+    
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Motivation" href="#motivation">
+                Motivation
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Intention" href="#intention">
+                Intention
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Dependencies" href="#dependencies">
+                Dependencies
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Directory Structure" href="#directory-structure">
+                Directory Structure
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Models</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="AlexNet" href="alexnet/">
+      AlexNet
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="CaffeNet" href="caffenet/">
+      CaffeNet
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="GoogLeNet" href="googlenet/">
+      GoogLeNet
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="VGG-19" href="vgg19/">
+      VGG-19
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Demos" href="demos/">
+      Demos
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Acknowledgements" href="license/">
+      Acknowledgements
+    </a>
+    
+  </li>
+
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+            <h1>ImageNet Models (Keras)</h1>
+          
+          <h3 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">#</a></h3>
+<p>Learn to build and experiment with well-known Image Processing Neural Network Models. As yet, there is no intention to train or run the models. Only served as a learning exercise to understand how these models are built and how to use the Keras Functional API.</p>
+<p>The second reason is that I do not have enough computing resource to fully train such a models with the computing resource I have currently available to not require the large amount of training time.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Models configuration may differ slightly from the original implementation</p>
+</div>
+<h3 id="intention">Intention<a class="headerlink" href="#intention" title="Permanent link">#</a></h3>
+<p>The purpose of the repository is to re-create ImageNet winners in Keras and to utilize their pretrainied model weights. The folllowing models will be recreated:</p>
+<ol>
+<li>AlexNet<ul>
+<li>Caffe version</li>
+<li>Added 9/5/2016</li>
+<li><em>Alexnet.py</em></li>
+</ul>
+</li>
+<li>AlexNet<ul>
+<li>From Original Paper Diagram</li>
+<li>Added 9/5/2016</li>
+<li><em>AlexNet_Unmodified.py</em></li>
+</ul>
+</li>
+<li>CaffeNet<ul>
+<li>Caffe version</li>
+<li>Added 11/5/2016</li>
+<li><em>CaffeNet.py</em></li>
+</ul>
+</li>
+<li>VGG-19<ul>
+<li>Caffe Version</li>
+<li>Added 9/5/2016</li>
+<li><em>VGG-19.py</em></li>
+</ul>
+</li>
+<li>GoogLeNet<ul>
+<li>As described in Original paper</li>
+<li>Added 11/5/2016</li>
+</ul>
+</li>
+</ol>
+<p>The next intention is to check if I can setup Tensorflow distributed training and Tensorflow Serving, untrained models will be used for this.</p>
+<h3 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">#</a></h3>
+<ul>
+<li>Keras</li>
+<li>Theano / Tensorflow</li>
+<li>Matplotlib</li>
+<li>Numpy</li>
+<li>Pydot</li>
+</ul>
+<h3 id="directory-structure">Directory Structure<a class="headerlink" href="#directory-structure" title="Permanent link">#</a></h3>
+<pre><code>/ImageNetModels
+    /KerasLayers
+        Custom_Layers.py - Contains LRN2D layer
+    /Model
+        *.png - pydot visulisations of each of the models
+        *.txt - outputs from building the models
+    /Serving - reserved for the exported Tensorflow models
+    /docs - MKDocs files
+    *.py - Keras Models
+</code></pre>
+          <aside class="copyright" role="note">
+            
+              Copyright (c) 2016 Dan Dixey &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+    </div>
+    <div class="next">
+      
+        <a href="alexnet/" title="AlexNet">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                AlexNet
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '.';
+      var repo_id  = 'dandxy89/ImageModels';
+    </script>
+    <script src="./assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>
