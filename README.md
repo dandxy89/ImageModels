@@ -1,6 +1,6 @@
 # Overview
 
-For full details of this repository please see the MKDocs documentation provided [here.]()
+For full details of this repository please see the MKDocs documentation provided [here.](http://dandxy89.github.io/ImageModels/)
 
 # Dependencies
 
