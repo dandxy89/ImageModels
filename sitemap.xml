@@ -4,7 +4,7 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2016-05-13</lastmod>
+     <lastmod>2016-05-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,25 +13,25 @@
         
     <url>
      <loc>None/alexnet/</loc>
-     <lastmod>2016-05-13</lastmod>
+     <lastmod>2016-05-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/caffenet/</loc>
-     <lastmod>2016-05-13</lastmod>
+     <lastmod>2016-05-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/googlenet/</loc>
-     <lastmod>2016-05-13</lastmod>
+     <lastmod>2016-05-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/vgg19/</loc>
-     <lastmod>2016-05-13</lastmod>
+     <lastmod>2016-05-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -40,7 +40,7 @@
     
     <url>
      <loc>None/demos/</loc>
-     <lastmod>2016-05-13</lastmod>
+     <lastmod>2016-05-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -48,7 +48,7 @@
     
     <url>
      <loc>None/license/</loc>
-     <lastmod>2016-05-13</lastmod>
+     <lastmod>2016-05-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
