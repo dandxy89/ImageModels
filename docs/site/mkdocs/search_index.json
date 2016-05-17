@@ -107,7 +107,7 @@
         }, 
         {
             "location": "/demos/", 
-            "text": "Info\n#\n\n\nThe demo script \nTrain.py\n can used to demo the following functions:\n\n\n*   Demonstrates that the Compile Model can process an Output\n\n*   Demonstrates who to export the Tensorflow Model (Issue)\n\n*   Demonstrates how to visualise slices of the Convolutional Layers\n\n*   Saves model summary and Image to the Model folder\n\n\n\nControllers\n#\n\n\nBy changing the following lines to True will dictate the what function is processed.\n\n\ntest_batch = False\nget_graph = False\nshow_activation = False\nshow_cmd_output = True\n\n\n\n\n\ntest_batch - this will compile the model, generate some random random data and then predict the output.\n\n\nget_graph - this will when it works how to export the Tensorflow graph\n\n\nshow_activation - this function displays using Matplotlib the visulisation of 10 slices from one Covnet Layer\n\n\nshow_cmd_output - this will save a summary of the file to txt file and export the diagram of the model to a folder. Instructions are contained in the file of how to run this.", 
+            "text": "Info\n#\n\n\nThe demo script \nTrain.py\n can used to demo the following functions:\n\n\n*   Demonstrates that the Compile Model can process an Output\n\n*   Demonstrates who to export the Tensorflow Model (Issue)\n\n*   Demonstrates how to visualise slices of the Convolutional Layers\n\n*   Saves model summary and Image to the Model folder\n\n\n\nControllers\n#\n\n\nBy changing the following lines to True will dictate the what function is processed.\n\n\ntest_batch = False\nget_graph = False\nshow_activation = False\nshow_cmd_output = True\n\n\n\n\n\ntest_batch - this will compile the model, generate some random random data and then predict the output.\n\n\nget_graph - this will when it works how to export the Tensorflow graph\n\n\nshow_activation - this function displays using Matplotlib the visulisation of 10 slices from one Covnet Layer\n\n\nshow_cmd_output - this will save a summary of the file to txt file and export the diagram of the model to a folder. Instructions are contained in the file of how to run this.\n\n\n\n\nLayer Slices\n#", 
             "title": "Demos"
         }, 
         {
@@ -119,6 +119,11 @@
             "location": "/demos/#controllers", 
             "text": "By changing the following lines to True will dictate the what function is processed.  test_batch = False\nget_graph = False\nshow_activation = False\nshow_cmd_output = True   test_batch - this will compile the model, generate some random random data and then predict the output.  get_graph - this will when it works how to export the Tensorflow graph  show_activation - this function displays using Matplotlib the visulisation of 10 slices from one Covnet Layer  show_cmd_output - this will save a summary of the file to txt file and export the diagram of the model to a folder. Instructions are contained in the file of how to run this.", 
             "title": "Controllers"
+        }, 
+        {
+            "location": "/demos/#layer-slices", 
+            "text": "", 
+            "title": "Layer Slices"
         }, 
         {
             "location": "/license/", 

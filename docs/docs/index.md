@@ -1,8 +1,8 @@
 ### Motivation
 
-Learn to build and experiment with well-known Image Processing Neural Network Models. As yet, there is no intention to train or run the models. Only served as a learning exercise to understand how these models are built and how to use the Keras Functional API.
+Learn to build and experiment with well-known Image Processing Neural Network Models. As yet, there is no intention to train or run the models. This repository only served as a learning exercise to understand how these models are built and how to use the new Keras Functional API.
 
-The second reason is that I do not have enough computing resource to fully train such a models with the computing resource I have currently available to not require the large amount of training time.
+The second reason is that I do not have enough computing resource to fully train such a models ( :( )with the computing resource I have currently available.... one day!
 
 !!! warning
     Models configuration may differ slightly from the original implementation
