@@ -6,7 +6,7 @@ from keras.preprocessing.image import load_img
 def load_cat_dog(HEIGHT, WIDTH, train_frac, test_frac):
     img_dir = './Datasets/cat_dog/train/'
     files = os.listdir(img_dir)
-    
+
     N_CATEGORY = 2
     N_ALL = len(files)
 
