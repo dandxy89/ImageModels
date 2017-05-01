@@ -22,7 +22,7 @@ def load_cat_dog(HEIGHT, WIDTH, train_frac, test_frac):
 
         entry = filename.split('.')
         y_train[i] = 1 if entry[0] == 'dog' else 0
-        
+
     N_TEST = int(test_frac * N_ALL)
     x_test = np.empty((N_TEST, HEIGHT, WIDTH, 3), np.uint8)
     y_test = np.empty((N_TEST,), np.int8)
@@ -35,7 +35,7 @@ def load_cat_dog(HEIGHT, WIDTH, train_frac, test_frac):
 
         entry = filename.split('.')
         y_test[i] = 1 if entry[0] == 'dog' else 0
-        
+
     return x_train, y_train, x_test, y_test, N_CATEGORY
 
 
@@ -47,7 +47,7 @@ def load_cifar101(HEIGHT, WIDTH, train_frac, test_frac):
     cat_to_ind = dict()
     for ind, cat in enumerate(categories):
         cat_to_ind[cat] = ind
-        
+
     all_img, all_label = [], []
 
     for category in categories:
@@ -58,7 +58,7 @@ def load_cifar101(HEIGHT, WIDTH, train_frac, test_frac):
             img = img.resize((HEIGHT,WIDTH))
             all_img.append(img)
             all_label.append(cat_to_ind[category])
-            
+
     N_ALL = len(all_img)
     N_CATEGORY = len(np.unique(all_label))
 
@@ -74,7 +74,7 @@ def load_cifar101(HEIGHT, WIDTH, train_frac, test_frac):
     np.random.shuffle(ind_list)
     x_all = x_all[ind_list, :,:,:]
     y_all = y_all[ind_list,]
-    
+
     N_TRAIN = int(train_frac * N_ALL)
     N_TEST = int(test_frac * N_ALL)
 
@@ -83,5 +83,5 @@ def load_cifar101(HEIGHT, WIDTH, train_frac, test_frac):
 
     x_test = x_all[N_TRAIN:N_TRAIN + N_TEST, :,:,:]
     y_test = y_all[N_TRAIN:N_TRAIN + N_TEST, ]
-    
+
     return x_train, y_train, x_test, y_test, N_CATEGORY
