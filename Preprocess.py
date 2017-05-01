@@ -1,14 +1,9 @@
 import os
 import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-from random import shuffle
 from keras.utils import np_utils
-
-from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array, load_img
+from keras.preprocessing.image import load_img
 
 def load_cat_dog(HEIGHT, WIDTH, train_frac, test_frac):
-    
     img_dir = './Datasets/cat_dog/train/'
     files = os.listdir(img_dir)
     
@@ -90,8 +85,3 @@ def load_cifar101(HEIGHT, WIDTH, train_frac, test_frac):
     y_test = y_all[N_TRAIN:N_TRAIN + N_TEST, ]
     
     return x_train, y_train, x_test, y_test, N_CATEGORY
-
-
-# def load_cifar101(HEIGHT, WIDTH, train_frac, test_frac):
-        
-
